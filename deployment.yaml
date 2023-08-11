@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complete-prodcution-e2e-deployment
+  name: java-demoapp-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: complete-prodcution-e2e-app
+      app: java-demoapp
   template:
     metadata:
       labels:
-        app: complete-prodcution-e2e-app
+        app: java-demoapp
     spec:
       containers:
-        - name: complete-prodcution-e2e-app
-          image: dmancloud/complete-prodcution-e2e-pipeline:1.0.0-36
+        - name: java-demoapp
+          image: siddharth20/java-demoapp:1.0.0-15
           resources:
             limits:
               memory: "256Mi"
