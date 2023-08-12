@@ -4,8 +4,6 @@ pipeline {
     }
     environment{
         APP_NAME = "java-demoapp"
-        DOCKER_USER = "siddharth20"
-        IMAGE_NAME = "${DOCKER_USER}/${APP_NAME}"
     }
     stages{
         stage("Cleanup Workspace"){
@@ -27,7 +25,7 @@ pipeline {
                 script{
                     sh """
                         cat deployment.yaml
-                        sed -i 's/${IMAGE_NAME}.*/${IMAGE_NAME}:${IMAGE_TAG}/g' deployment.yaml
+                        sed -i 's/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g' deployment.yaml
                         cat deployment.yaml
                     """
                 }
