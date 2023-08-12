@@ -1,9 +1,9 @@
 pipeline {
     agent {
-        label "java-demoapp"
+        label "jenkins-agent"
     }
     environment {
-        APP_NAME = "complete-prodcution-e2e-pipeline"
+        APP_NAME = "java-demoapp"
     }
 
     stages {
