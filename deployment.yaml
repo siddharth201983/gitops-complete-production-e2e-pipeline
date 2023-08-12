@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: java-demoapp:1.0.0-16
+  name: java-demoapp:1.0.0-17
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: java-demoapp:1.0.0-16
+      app: java-demoapp:1.0.0-17
   template:
     metadata:
       labels:
-        app: java-demoapp:1.0.0-16
+        app: java-demoapp:1.0.0-17
     spec:
       containers:
-        - name: java-demoapp:1.0.0-16
-          image: siddharth20/java-demoapp:1.0.0-16
+        - name: java-demoapp:1.0.0-17
+          image: siddharth20/java-demoapp:1.0.0-17
           resources:
             limits:
               memory: "256Mi"
