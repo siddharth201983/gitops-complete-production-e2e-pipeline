@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: demoapp
-          image: siddharth20/java-demoapp:1.0.0-22
+          image: siddharth20/java-demoapp:1.0.0-23
           resources:
             limits:
               memory: "256Mi"
