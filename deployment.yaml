@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: java-demoapp:1.0.0-20
+  name: java-demoapp-deploy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: java-demoapp:1.0.0-20
+      app: java-demoapp
   template:
     metadata:
       labels:
-        app: java-demoapp:1.0.0-20
+        app: java-demoapp
     spec:
       containers:
-        - name: java-demoapp:1.0.0-20
+        - name: java-demoapp
           image: siddharth20/java-demoapp:1.0.0-20
           resources:
             limits:
